@@ -74,4 +74,6 @@ RUN scons \
     scons install
 
 # Copy notebooks into place
+# (n.b. This must be last because otherwise Dockerfile edits
+# invalidate the build cache)
 COPY . $HOME
