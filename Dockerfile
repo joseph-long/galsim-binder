@@ -41,9 +41,6 @@ RUN cd tmv-0.73 && sudo scons install
 
 USER $NB_USER
 
-# Copy notebooks into place
-COPY . $HOME
-
 # Note: this Dockerfile is ordered roughly by how often things are expected
 # to change (ascending). That way, only the last few changed steps are
 # rebuilt on push.
@@ -75,3 +72,6 @@ RUN scons \
     PYPREFIX=$PYHOME/lib/python$PYTHON_VERSION/site-packages \
     BOOST_DIR=$PYHOME && \
     scons install
+
+# Copy notebooks into place
+COPY . $HOME
