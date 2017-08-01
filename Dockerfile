@@ -48,7 +48,8 @@ RUN pip3 install --no-cache-dir starlink-pyast
 RUN pip2 install --no-cache-dir starlink-pyast
 
 # Obtain GalSim
-RUN git clone --depth=1 https://github.com/GalSim-developers/GalSim.git $HOME/galsim
+ENV GALSIM_RELEASE releases/1.4
+RUN git clone -b $GALSIM_RELEASE --depth=1 https://github.com/GalSim-developers/GalSim.git $HOME/galsim
 WORKDIR $HOME/galsim
 # Build GalSim
 RUN scons \
