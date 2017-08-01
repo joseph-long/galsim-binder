@@ -37,10 +37,8 @@ RUN conda config --add channels conda-forge
 # from conda:
 ENV EXTRA_PACKAGES astropy future pyyaml pandas boost
 RUN conda install --yes $EXTRA_PACKAGES && \
-    conda remove  --yes --force qt pyqt && \
     conda clean -tipsy
 RUN conda install --yes -n python2 $EXTRA_PACKAGES && \
-    conda remove  --yes -n python2 --force qt pyqt && \
     conda clean -tipsy
 
 # from pip:
