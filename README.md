@@ -6,7 +6,7 @@ This repository includes the necessary instructions to set up an environment wit
 
 ## Launch in the cloud with Binder
 
-To launch in Binder *(beta)*, follow this URL: https://beta.mybinder.org/v2/gh/josePhoenix/galsim-binder/master
+To launch in Binder *(beta)*, click here: [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/joseph-long/galsim-binder/master)
 
 ## Run locally
 
