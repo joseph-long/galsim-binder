@@ -39,7 +39,7 @@ ENV EXTRA_PACKAGES astropy future pyyaml pandas boost
 RUN conda install --yes $EXTRA_PACKAGES && \
     conda clean -tipsy
 # from pip:
-RUN pip3 install --no-cache-dir starlink-pyast
+RUN pip install --no-cache-dir starlink-pyast
 
 # Obtain GalSim
 ENV GALSIM_RELEASE releases/1.4
