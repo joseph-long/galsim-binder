@@ -42,7 +42,7 @@ RUN conda install --yes $EXTRA_PACKAGES && \
 RUN pip install --no-cache-dir starlink-pyast
 
 # Obtain GalSim
-ENV GALSIM_RELEASE releases/1.4
+ENV GALSIM_RELEASE releases/1.5
 RUN git clone -b $GALSIM_RELEASE --depth=1 https://github.com/GalSim-developers/GalSim.git $HOME/galsim
 WORKDIR $HOME/galsim
 # Build GalSim
