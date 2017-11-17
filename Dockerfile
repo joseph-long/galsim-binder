@@ -33,17 +33,13 @@ ENV LD_LIBRARY_PATH $HOME/lib:$LD_LIBRARY_PATH
 # Enable conda-forge package list
 RUN conda config --add channels conda-forge
 
-# Install GalSim dependencies for python2 and python3
+# Install GalSim dependencies for python3
 # from conda:
 ENV EXTRA_PACKAGES astropy future pyyaml pandas boost
 RUN conda install --yes $EXTRA_PACKAGES && \
     conda clean -tipsy
-RUN conda install --yes -n python2 $EXTRA_PACKAGES && \
-    conda clean -tipsy
-
 # from pip:
 RUN pip3 install --no-cache-dir starlink-pyast
-RUN pip2 install --no-cache-dir starlink-pyast
 
 # Obtain GalSim
 ENV GALSIM_RELEASE releases/1.4
