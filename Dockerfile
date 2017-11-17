@@ -1,4 +1,4 @@
-FROM jupyter/scipy-notebook
+FROM jupyter/scipy-notebook@7fd175ec22c7
 MAINTAINER Joseph Long <help@stsci.edu>
 
 # Note: this is ordered roughly by how often things are expected
